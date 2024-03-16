@@ -29,8 +29,8 @@ app.use(express.json());
     const transporte = nodemailer.createTransport({// Configurar el transporte para enviar correos electrónicos
       service: 'Gmail', // Cambia esto según tu proveedor de correo electrónico
       auth: {
-          user: 'laurapinzonf1@gmail.com', 
-          pass: 'kscx qfic tubd atsr' 
+          user: '', 
+          pass: '' 
       }
     });
     app.post('/enviar-correo', async (req, res) => {
