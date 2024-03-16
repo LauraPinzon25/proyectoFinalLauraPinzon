@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final</title>
+    <link rel="stylesheet" href="../stylesheets/style.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+			<img src="../images/logo.png">
+        </div>
+        <nav>
+			<a href="../html/index.html" class="hvr-buzz-out">Inicio</a>
+			<a href="../html/consultarCP.html" class="hvr-buzz-out">Catálogo Películas-Categoría</a>
+			<a href="../html/consultarLP.html" class="hvr-buzz-out">Catálogo Películas-Lenguaje</a>
+			<a href="../html/verPeliculasActor.html" class="hvr-buzz-out">Compra De Películas-Actor</a>
+            <a href="../html/consultarUsuario.html" class="hvr-buzz-out">Usuario</a>
+		</nav>
+    </header>
+    <main>
+      <div class="imagenes">
+        <h1>Usuarios Registrados</h1>
+        <table id="usuario">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+              </tr>
+          </thead>
+        <script src="../controladores/controladorUsuarios.js"></script>
+      </table>
+      <br>
+    <!--mostrar las primeras 10 consultas-->
+    <div id="pagination">
+      <button class="unoP" onclick="firstPage()">Primera página</button>
+      <button class="unoA" onclick="previousPage()">Página anterior</button>
+      <button class="SP" onclick="nextPage()">Siguiente página</button>
+      <span id="currentPage"></span>
+    </div>
+  </div>
+    </main>
+</body>
+</html>

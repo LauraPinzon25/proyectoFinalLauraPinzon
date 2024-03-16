@@ -1,0 +1,268 @@
+body{
+	font-family: Arial, sans-serif;
+  background-color: black;
+  font-weight: bold;
+  
+}
+/*cabeza*/
+header{
+	display: flex;
+	min-height: 70px;
+	justify-content: left;
+	align-items: center;
+  width: auto;
+  font-size: 140%;
+}
+/*logo imagen*/
+.logo img{
+  width: 150px;
+	height: 100px;
+  display: flex;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  animation: moveBorder 2s infinite alternate; 
+}
+/* Define la animación logo */
+@keyframes moveBorder {
+  0% {
+      border-color: red; /* Color inicial del borde */  
+  }
+  50% {
+      border-color: blue; /* Color intermedio del borde */  
+  }
+  100% {
+      border-color: green; /* Color final del borde */  
+  }
+}
+/*navegacion*/
+nav a{
+  text-decoration: none;
+	color: white;
+  padding: 8px 30px;
+  border-radius: 22px;
+  transition: background-color 0.3s;
+  border: 1px solid transparent;
+}
+nav a:hover{
+	transition: 0.25s;
+  background: rgb(56, 130, 209);
+  animation: navegacion 2s infinite alternate; 
+}
+/* Define la animación */
+@keyframes navegacion {
+  0% {
+      
+      border-color: white; /* Color inicial del borde */
+  }
+  50% {
+      border-color: red; /* Color intermedio del borde */  
+  }
+  100% {
+      border-color: yellow; /* Color final del borde */
+  }
+}
+.imagenes{
+  width: 99.5%;
+  height: 700px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-size: 100% 100%;
+  animation: 10s;
+  animation-name: ima;
+  animation-iteration-count: infinite;
+}
+@keyframes ima{
+  0%{
+    background-image: url(../images/mortal.jpg);
+    border-color: red;
+  }
+  25%{
+    background-image: url(../images/avatar.jpeg);
+    border-color: yellow;
+  }
+  50%{
+    background-image: url(../images/aven.jpeg);
+    border-color: green;
+  }
+  100%{
+    background-image: url(../images/opp.jpg);
+    border-color: blue;
+  }
+}
+h1{
+  color: white;
+}
+#resultados{
+  font-size: 16px;
+  color: black;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 40px;
+  border: 5px solid black;
+  box-shadow: -5px 4px 4px blue;
+}
+#resultados,th,td{
+  border: 5px solid white;
+  padding: 20px;
+  text-align: center;
+  width: 1500px;
+}
+#Lenguaje{
+  font-size: 16px;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 300px;
+  border: 5px solid white;
+  box-shadow: -5px 4px 4px blue;
+}
+#Lenguaje,th,td{
+  border: 5px solid white;
+  padding: 10px;
+  text-align: center;
+  width: 1000px;
+}
+/*Estilos categoría*/
+#categoria{
+  font-size: 16px;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 300px;
+  border: 5px solid white;
+  box-shadow: -5px 4px 4px blue;
+}
+#categoria,th,td{
+  padding: 10px;
+  text-align: center;
+  border: 5px solid #ddd;
+  width: 1000px;
+}
+#usuario{
+  font-size: 16px;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 300px;
+  border: 5px solid white;
+  box-shadow: -5px 4px 4px yellow;
+}
+#usuario,th,td{
+  border: 5px solid white;
+  padding: 10px;
+  text-align: center;
+  width: 1000px;
+}
+.unoP, .unoA, .SP{
+  margin-left: 255px;
+}
+span{
+  color: black;
+  font-size: 20px;
+  border: 2px solid black;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(200,213,170,1) 29%, rgba(147,210,219,1) 49%, rgba(148,187,233,1) 100%);
+}
+/* Estilos CSS para los elementos de la lista */
+.resultado-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: black;
+  background-color:  rgb(255, 255, 255,0.5);
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+  border: 5px solid blue;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+th {
+  background-color: rgb(245, 10, 10,0.7);
+  color: white;
+  font-size: 30px;
+  
+}
+button{
+  padding: 8px 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border: 5px solid black;
+  animation: boton 2s infinite alternate; 
+  box-shadow: -4px 4px 4px  white
+}
+button:hover {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); 
+
+}
+@keyframes boton{
+  0%{
+    border-bottom-color: red;
+  }
+  25%{
+    border-bottom-color: yellow;
+  }
+  50%{
+    border-bottom-color: green;
+  }
+  100%{
+    border-bottom-color: purple;
+  }
+}
+#carrito {
+  margin-top: 20px;
+  border: 1px solid white;
+  padding: 10px;
+}
+ul,p,h2 {
+  color: white;
+}
+form{
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  color: white;
+  border: 2px solid white;
+  width: 500px;
+  align-content: center;
+  text-align: center;
+  animation: formulario 2s infinite alternate; 
+  margin-left: 500px;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: -5px 5px 5px white;
+}
+@keyframes formulario{
+  0%{
+    border-color: red;
+  }
+  25%{
+    border-color: yellow;
+  }
+  50%{
+    border-color: green;
+  }
+  100%{
+    border-color: blue;
+  }
+}
+input{
+  justify-content: center;
+  width: auto;
+}
+#mensaje{
+  color: white;
+}

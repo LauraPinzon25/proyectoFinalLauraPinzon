@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/style.css" />
+  <title>Catalogo películas y actores</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../images/logo.png">
+    </div>
+    <nav>
+      <a href="../html/index.html">Inicio</a>
+      <a href="../html/consultarCP.html">Catálogo Películas-Categoría</a>
+      <a href="../html/consultarLP.html">Catálogo Películas-Lenguaje</a>
+      <a href="../html/verPeliculasActor.html">Compra De Películas-Actor</a>
+      <a href="../html/consultarUsuario.html">Usuarios</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Compra De Películas-Actor</h1>
+    <table id="resultados">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <div id="carrito">
+        <script src="../controladores/controladorCatalogoPA.js"></script>
+        <h2>Carrito de Compra</h2>
+        <ul id="carritoItems"></ul>
+        <p>Total: $<span id="totalPrecio">0</span></p>
+        <button onclick="limpiarCarrito()">Limpiar carrito</button>
+        <button onclick="enviarTotal()">Continuar con el pago</button>
+      </div>
+    </table>
+    <br>
+    <!--mostrar las primeras 5 consultas-->
+    <div id="pagination">
+      <button class="unoP" onclick="firstPage()">Primera página</button>
+      <button class="unoA" onclick="previousPage()">Página anterior</button>
+      <button class="SP" onclick="nextPage()">Siguiente página</button>
+      <span id="currentPage"></span>
+    </div>
+  </main>
+  <script>
+    function enviarTotal() {
+      if (confirm("¿Deseas continuar?")) {
+        // Aquí puedes colocar el código que se ejecutará si el usuario elige continuar
+        alert("Continuando con la acción...");
+        const totalPrecio = document.getElementById('totalPrecio').textContent;
+        localStorage.setItem('totalPrecio', totalPrecio);
+        window.location.href = '../html/formularioPago.html';
+      } else {
+        // Aquí puedes colocar el código que se ejecutará si el usuario elige cancelar
+        alert("Acción cancelada.");
+      }
+    }
+  </script>
+</body>
+</html>

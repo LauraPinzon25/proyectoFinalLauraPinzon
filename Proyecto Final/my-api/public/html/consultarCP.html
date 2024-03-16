@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/style.css" />
+  <title>Catalogo películas y categoria</title>
+</head>
+
+<body>
+  <header>
+    <!--logo-->
+    <div class="logo">
+      <img src="../images/logo.png">
+    </div>
+      <!--navegacion-->
+    <nav>
+      <a href="../html/index.html">Inicio</a>
+      <a href="../html/consultarCP.html">Catálogo Películas-Categoría</a>
+      <a href="../html/consultarLP.html">Catálogo Películas-Lenguaje</a>
+      <a href="../html/verPeliculasActor.html">Compra De Películas-Actor</a>
+      <a href="../html/consultarUsuario.html">Usuarios</a>
+    </nav>
+  </header>
+  <main>
+    <div class="imagenes">
+    <h1>Catálogo Películas-Categoría</h1>
+      <!--Imagenes de peliculas-->
+
+    <!--tabla para mostrar los datos-->
+    <table id="categoria">
+      <thead>
+        <tr class="categoria">
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <!--mostrar las primeras 10 consultas-->
+    <div id="pagination">
+      <button class="unoP" onclick="firstPage()">Primera página</button>
+      <button class="unoA" onclick="previousPage()">Página anterior</button>
+      <button class="SP" onclick="nextPage()">Siguiente página</button>
+      <span id="currentPage"></span>
+    </div>
+    <script src="../controladores/controladorCatalogoCP.js"></script>
+  </div>
+  </main>
+</body>
+</html>

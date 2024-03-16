@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pago</title>
+    <link rel="stylesheet" href="../stylesheets/style.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+			<img src="../images/logo.png">
+        </div>
+        <nav>
+            <a href="../html/index.html" class="hvr-buzz-out">Inicio</a>
+			<a href="../html/consultarCP.html" class="hvr-buzz-out">Catálogo Películas-Categoría</a>
+			<a href="../html/consultarLP.html" class="hvr-buzz-out">Catálogo Películas-Lenguaje</a>
+			<a href="../html/verPeliculasActor.html" class="hvr-buzz-out">Compra De Películas-Actor</a>
+            <a href="../html/consultarUsuario.html" class="hvr-buzz-out">Usuario</a>
+		</nav>
+    </header>
+    <main>
+        <div class="imagenes">
+    <h1>Compra De Películas</h1>
+<form id="emailForm">
+    <br>
+    <label for="Nombre">Nombre: </label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    <label for="Nombre">Apellido: </label>
+    <input type="text" id="apellido" name="apellido" required><br><br>
+    <label for="Nombre">Telefono: </label>
+    <input type="text" id="telefono" name="telefono" required><br><br>
+    <label for="correo">Correo: </label>
+    <input type="email" id="to" name="to" required><br><br>
+    <p>El total de tu compra es: $<span id="totalCompra"></span></p>
+    <button onclick="enviarCorreo()">Enviar Correo</button><br><br>
+    <p id="mensaje"></p>
+
+</form>
+<script src="../controladores/correCompra.js"></script>
+<script>
+    
+    // Obtener el total del precio almacenado en localStorage
+    const totalPrecio = localStorage.getItem('totalPrecio');
+
+    // Mostrar el total de la compra en la página
+    document.getElementById('totalCompra').textContent = totalPrecio;
+</script>
+</div>
+</main>
+</body>
+</html>
