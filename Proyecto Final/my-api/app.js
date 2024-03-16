@@ -29,15 +29,15 @@ app.use(express.json());
     const transporte = nodemailer.createTransport({// Configurar el transporte para enviar correos electrónicos
       service: 'Gmail', // Cambia esto según tu proveedor de correo electrónico
       auth: {
-          user: '', 
-          pass: '' 
+          user: 'l0621622@gmail.com', 
+          pass: 'w r o e z l j i r q n f w g n t' 
       }
     });
     app.post('/enviar-correo', async (req, res) => {
       const {nombre,apellido,telefono,to,totalPrecio} = req.body;
       try {
     const mailOptions={
-      from: "laurapinzonf1@gmail.com",
+      from: "l0621622@gmail.com",
       to: to,
       subject: 'Confirmación de compra',
       html: ` 
